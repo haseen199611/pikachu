@@ -1,2 +1,3 @@
-# BOSS
-Security BOT Groups TH3BOSS | We The Best _ https://th3boss.com
+# pikachu
+git remote add origin https://github.com/haseen199611/pikachu.git
+git push -u origin master
