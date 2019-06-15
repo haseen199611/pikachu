@@ -24,14 +24,14 @@ Version=`lsb_release -rs | cut -f1 -d"."`
 
 if [ "$Version" == "18" ];then
 echo -e "${SMAY}\n"
-echo -e " ▀█████████▄   ▄██████▄     ▄████████    ▄████████"
-echo -e "   ███    ███ ███    ███   ███    ███   ███    ███"
-echo -e "   ███    ███ ███    ███   ███    █▀    ███    █▀"
+echo -e " ██████▄   ▄██████▄     ▄████████    ▄████████"
+echo -e "   ███    "
+echo -e "   ██  ███    █▀"
 echo -e "  ▄███▄▄▄██▀  ███    ███   ███          ███"
-echo -e " ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS"
-echo -e "   ███    ██▄ ███    ███          ███          ███ ¦ Dev : @BLCON"
+echo -e " ▀▀██ ¦ Dev : @Ha_ssin2"
+echo -e "   ███        ███          ███ ¦ Dev : @BLCON"
 echo -e "   ███    ███ ███    ███    ▄█    ███    ▄█    ███"
-echo -e " ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS"
+echo -e " ▄█████████▀   ▀██████▀   ▄█████  ¦ Source pikachu BY @Ha_ssin"
 echo -e " ---------------------------------------------------------------------"
 echo -e "${CNIL}"
 echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
@@ -46,10 +46,10 @@ echo -e " ▀█████████▄   ▄██████▄     ▄�
 echo -e "   ███    ███ ███    ███   ███    ███   ███    ███"
 echo -e "   ███    ███ ███    ███   ███    █▀    ███    █▀"
 echo -e "  ▄███▄▄▄██▀  ███    ███   ███          ███"
-echo -e " ▀▀███▀▀▀██▄  ███    ███ ▀███████████ ▀███████████ ¦ Dev : @TH3BOSS"
-echo -e "   ███    ██▄ ███    ███          ███          ███ ¦ Dev : @BLCON"
-echo -e "   ███    ███ ███    ███    ▄█    ███    ▄█    ███"
-echo -e " ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source TH3BOSS BY @TH3BS"
+echo -e "  ▀███████ ¦ Dev : @Ha_ssin"
+echo -e "   ███            ███    ███          ███          ███ ¦ Dev : @Ha_ssin"
+echo -e "   ███              ▄█    ███    ▄█    ███"
+echo -e " ▄█████████▀   ▀██████▀   ▄████████▀   ▄████████▀  ¦ Source pikachu BY @Ha_ssin2"
 echo -e " ---------------------------------------------------------------------"
 echo -e "${CNIL}"
 
@@ -58,7 +58,7 @@ memory_free=`awk '/^Mem/ {print $4}' <(free -m)`
 if [ "$memory_free" -le 60 ]; then
 echo -e "${RED}¦
 ¦ CAUTION:${WHITEC} Your RAM size is less than 60MB.
-¦ NOW you can not install the SOURCE TH3BOSS. \n
+¦ NOW you can not install the SOURCE pikachu. \n
 ¦${WHITB}¦ YOUR RAM FREE SIZE IS : ${SMAY}${memory_free}MB${CNIL}"
 exit ;
 fi
@@ -69,11 +69,11 @@ if [ "${PKG_OK}" == "installed" ]; then
 if [ "$1" == "-R" ] ; then
 GET_INSTALL="NO"
 else
-GET_INSTALL=$(redis-cli get TH3BOSS_INSTALL)
+GET_INSTALL=$(redis-cli get pikachu_INSTALL)
 fi
 if [ "${GET_INSTALL}" == "Yes" ]; then
 echo -e "
-${SMAY}>> ${LSAMAY}Source TH3BOSS${SMAY} is Already Installed ^_^ .\n${CNIL}"
+${SMAY}>> ${LSAMAY}Source pikachu${SMAY} is Already Installed ^_^ .\n${CNIL}"
 sudo luarocks install luautf8
 sudo chmod +x ./run
 sudo chmod +x ./TG
@@ -82,7 +82,7 @@ exit;
 fi 
 fi
 
-echo -e "${WHITB}\n¦ installing source ... \n\n\n\n${CNIL}"
+echo -e "${WHITB}\n¦ installing source ... \n\n\n\n${CNIL}
 sudo apt-get update -y
 sudo apt-get upgrade -y
 echo -e "\x1B[01;90m\n¦ software-properties-common installing ... \n\x1B[0m"
